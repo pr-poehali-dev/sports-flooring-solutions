@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import Specifications from '@/components/Specifications';
 import Benefits from '@/components/Benefits';
 import Categories from '@/components/Categories';
+import Rental from '@/components/Rental';
 import About from '@/components/About';
 import Projects from '@/components/Projects';
 import HowToChoose from '@/components/HowToChoose';
@@ -21,6 +22,9 @@ const Index = () => {
         <Benefits />
         <section id="catalog">
           <Categories />
+        </section>
+        <section id="rental">
+          <Rental />
         </section>
         <section id="about">
           <About />
