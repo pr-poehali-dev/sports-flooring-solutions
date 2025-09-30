@@ -49,35 +49,25 @@ const Categories = () => {
   ];
 
   return (
-    <section className="py-20 bg-muted/30">
+    <section className="py-16 bg-muted/20">
       <div className="container">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">Каталог продукции</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Широкий ассортимент профессиональных покрытий для различных видов спорта и фитнеса
+        <div className="mb-10 animate-fade-in">
+          <h2 className="text-3xl font-bold mb-3">Похожие товары</h2>
+          <p className="text-muted-foreground">
+            Другие покрытия для единоборств и спортивных залов
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
           {products.map((product, index) => (
             <div 
               key={index} 
               className="animate-fade-in" 
-              style={{ animationDelay: `${index * 0.1}s` }}
+              style={{ animationDelay: `${index * 0.05}s` }}
             >
               <ProductCard {...product} />
             </div>
           ))}
-        </div>
-        
-        <div className="text-center mt-12">
-          <a 
-            href="#" 
-            className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
-          >
-            Посмотреть весь каталог
-            <span>→</span>
-          </a>
         </div>
       </div>
     </section>

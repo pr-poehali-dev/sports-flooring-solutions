@@ -3,75 +3,80 @@ import Icon from '@/components/ui/icon';
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 bg-diagonal-stripes opacity-10" />
-      
-      <div className="container relative py-24 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8 animate-fade-in">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full text-sm font-medium">
-              <Icon name="Award" size={16} className="text-primary" />
-              <span>Профессиональные спортивные покрытия</span>
-            </div>
-            
-            <h1 className="text-5xl lg:text-6xl font-bold leading-tight">
-              Покрытия для<br />
-              <span className="text-primary">единоборств</span> и<br />
-              спортивных залов
+    <section className="py-12 lg:py-20">
+      <div className="container">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
+          <div className="space-y-6 animate-fade-in">
+            <h1 className="text-4xl lg:text-5xl font-bold leading-tight">
+              Будо-маты
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-xl">
-              Поставляем качественные маты, татами и модульные покрытия для профессиональных залов. 
-              Более 10 лет на рынке спортивного оборудования.
-            </p>
-            
-            <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="text-base">
-                Выбрать покрытие
-                <Icon name="ArrowRight" size={20} className="ml-2" />
-              </Button>
-              <Button size="lg" variant="outline" className="text-base">
-                Аренда покрытий
-              </Button>
+            <div className="prose prose-lg max-w-none">
+              <p className="text-base leading-relaxed">
+                Будо-маты — это специализированные спортивные маты, разработанные для тренировок и соревнований по восточным единоборствам. 
+                Они обеспечивают надежную защиту спортсменов при падениях и бросках, а также создают комфортные условия для занятий.
+              </p>
+              
+              <h2 className="text-2xl font-bold mt-8 mb-4">Особенности будо-матов:</h2>
+              <ul className="space-y-3 list-disc pl-6">
+                <li className="text-base"><strong>Высокая плотность материала</strong> — обеспечивает надежную амортизацию</li>
+                <li className="text-base"><strong>Антискользящее покрытие</strong> — предотвращает травмы</li>
+                <li className="text-base"><strong>Простота сборки</strong> — маты легко соединяются без зазоров</li>
+                <li className="text-base"><strong>Долговечность</strong> — устойчивы к интенсивным нагрузкам</li>
+                <li className="text-base"><strong>Гигиеничность</strong> — легко чистятся и не впитывают влагу</li>
+              </ul>
+              
+              <h2 className="text-2xl font-bold mt-8 mb-4">Применение:</h2>
+              <p className="text-base leading-relaxed">
+                Будо-маты широко используются в залах для дзюдо, самбо, айкидо, джиу-джитсу и других видов борьбы. 
+                Они подходят как для профессиональных тренировок, так и для любительских занятий.
+              </p>
             </div>
             
-            <div className="grid grid-cols-3 gap-6 pt-8 border-t">
-              <div>
-                <div className="text-3xl font-bold text-primary">500+</div>
-                <div className="text-sm text-muted-foreground">Реализованных проектов</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">10</div>
-                <div className="text-sm text-muted-foreground">Лет на рынке</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold text-primary">100%</div>
-                <div className="text-sm text-muted-foreground">Качество продукции</div>
-              </div>
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button size="lg" className="text-base font-semibold">
+                Заказать расчет
+                <Icon name="Calculator" size={20} className="ml-2" />
+              </Button>
+              <Button size="lg" variant="outline" className="text-base font-semibold">
+                Скачать каталог
+                <Icon name="Download" size={20} className="ml-2" />
+              </Button>
             </div>
           </div>
           
-          <div className="relative lg:h-[600px] animate-scale-in">
-            <div className="absolute top-0 right-0 w-full h-full">
-              <div className="relative w-full h-full rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="https://v3.fal.media/files/kangaroo/XENHWCB0Pvl5BI9yIXEcJ_output.png" 
-                  alt="Спортивные покрытия" 
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+          <div className="space-y-6 animate-fade-in lg:sticky lg:top-24">
+            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <img 
+                src="https://v3.fal.media/files/kangaroo/XENHWCB0Pvl5BI9yIXEcJ_output.png" 
+                alt="Будо-маты" 
+                className="w-full h-auto object-cover"
+              />
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+                <div className="text-3xl font-bold text-primary mb-2">от 920₽</div>
+                <div className="text-sm text-muted-foreground">за квадратный метр</div>
               </div>
-              
-              <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl max-w-xs animate-fade-in" style={{ animationDelay: '0.3s' }}>
-                <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 bg-primary rounded-lg flex items-center justify-center">
-                    <Icon name="CheckCircle2" className="text-primary-foreground" size={32} />
-                  </div>
-                  <div>
-                    <div className="font-bold text-lg">Сертифицировано</div>
-                    <div className="text-sm text-muted-foreground">Соответствует ГОСТ</div>
-                  </div>
-                </div>
+              <div className="bg-primary/5 rounded-xl p-6 border border-primary/10">
+                <div className="text-3xl font-bold text-primary mb-2">100%</div>
+                <div className="text-sm text-muted-foreground">качество ГОСТ</div>
+              </div>
+            </div>
+            
+            <div className="bg-muted rounded-xl p-6 space-y-3">
+              <div className="flex items-center gap-3">
+                <Icon name="Truck" className="text-primary" size={24} />
+                <span className="text-sm font-medium">Доставка по всей России</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Icon name="Award" className="text-primary" size={24} />
+                <span className="text-sm font-medium">Сертифицированная продукция</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Icon name="Clock" className="text-primary" size={24} />
+                <span className="text-sm font-medium">Производство 5-7 дней</span>
               </div>
             </div>
           </div>

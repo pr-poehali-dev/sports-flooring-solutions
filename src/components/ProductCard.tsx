@@ -14,38 +14,33 @@ interface ProductCardProps {
 
 const ProductCard = ({ title, category, price, image, icon, isNew }: ProductCardProps) => {
   return (
-    <Card className="group overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-      <div className="relative aspect-square overflow-hidden bg-muted">
+    <Card className="group overflow-hidden hover:shadow-lg transition-all duration-300 border border-border/50">
+      <div className="relative aspect-[4/3] overflow-hidden bg-muted">
         <img 
           src={image} 
           alt={title}
-          className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
         {isNew && (
-          <Badge className="absolute top-4 right-4 bg-primary">
-            Новинка
+          <Badge className="absolute top-3 right-3 bg-primary text-xs">
+            Хит
           </Badge>
         )}
-        <div className="absolute top-4 left-4 w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-md">
-          <Icon name={icon as any} className="text-primary" size={24} />
-        </div>
       </div>
       
-      <CardContent className="p-6">
-        <div className="text-sm text-muted-foreground mb-2">{category}</div>
-        <h3 className="font-bold text-lg mb-3">{title}</h3>
-        <div className="flex items-baseline gap-2">
-          <span className="text-2xl font-bold text-primary">{price}</span>
-          <span className="text-sm text-muted-foreground">₽</span>
+      <CardContent className="p-5">
+        <h3 className="font-semibold text-lg mb-3 group-hover:text-primary transition-colors">{title}</h3>
+        <div className="text-sm text-muted-foreground mb-4">{category}</div>
+        <div className="flex items-center justify-between">
+          <div className="flex items-baseline gap-1">
+            <span className="text-xl font-bold">от {price}</span>
+            <span className="text-sm text-muted-foreground">₽/м²</span>
+          </div>
+          <Button size="sm" variant="ghost" className="text-primary hover:text-primary hover:bg-primary/10">
+            <Icon name="ArrowRight" size={18} />
+          </Button>
         </div>
       </CardContent>
-      
-      <CardFooter className="p-6 pt-0">
-        <Button className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
-          Подробнее
-          <Icon name="ArrowRight" size={16} className="ml-2" />
-        </Button>
-      </CardFooter>
     </Card>
   );
 };
